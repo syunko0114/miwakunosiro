@@ -233,24 +233,14 @@
         var allarmor=[];
         </script>
                 <?php
-              //$dsn = 'mysql:host=mysql632.db.sakura.ne.jp;dbname=sllyun14_miwakunosiro;charset=utf8';
-              //$user = 'sllyun14';
-              //$password = 'sql20000114';
-              $dsn = 'mysql:dbname=miwakunosiro;host=localhost';
-              $user = 'root';
+              $dsn = 'mysql:dbname=;host=';
+              $user = '';
               $password = '';
               try {
                
-                // PDOインスタンスを生成
                 $dbh = new PDO($dsn, $user, $password);
-               
-              // エラー（例外）が発生した時の処理を記述
               } catch (PDOException $e) {
-               
-                // エラーメッセージを表示させる
                 echo 'データベースにアクセスできません！' . $e->getMessage();
-               
-                // 強制終了
                 exit;
                
               }
